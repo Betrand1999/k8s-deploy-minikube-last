@@ -17,7 +17,7 @@ jobs:
      - name: build with docker 
        run: docker build -t local-image .
      - name: run the image 
-       run: docker run -d -p 3030:80 local-image 
+       run: docker run -d -p 4040:80 local-image 
      - name: tag image 
        run: docker tag betrand1997:latest local-image:latest
      - name: push image 
