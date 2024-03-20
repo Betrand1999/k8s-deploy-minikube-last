@@ -15,7 +15,7 @@ jobs:
          username: ${{ secrets.DOCKER_USERNAME}}
          password: ${{secrets.DOCKER_PASSWORD}}
      - name: build with docker 
-       run: docker build local-image .
+       run: docker build -t local-image .
      - name: run the image 
        run: docker run -d -p 3030:80 local-image 
      - name: tag image 
