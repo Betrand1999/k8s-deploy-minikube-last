@@ -19,6 +19,6 @@ jobs:
      - name: run the image 
        run: docker run -d -p 3030:80 local-image 
      - name: tag image 
-       run: docker tag betrand1997:latest/local-image:latest
+       run: docker tag betrand1997:latest local-image:latest
      - name: push image 
        run: docker push betrand1997:latest/local-image:latest
