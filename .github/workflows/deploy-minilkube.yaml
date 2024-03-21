@@ -11,6 +11,6 @@ jobs:
        uses: actions/checkout@v2 
      - name: deploy k8s manifest 
        run: | 
-        kubectl apply -f ./kubernets.namespace.yaml
-        kubectl apply -f ./kubernets.deployment.yaml
-        kubectl apply -f ./kubernets.service.yaml 
+        kubectl apply -f ./kubernets/namespace.yaml
+        kubectl apply -f ./kubernets/deployment.yaml
+        kubectl apply -f ./kubernets/service.yaml 
