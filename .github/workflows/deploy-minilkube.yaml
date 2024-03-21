@@ -1,1 +1,16 @@
-
+name: deploy to k8s
+on:
+ push:
+   branches:
+     - dev-branch 
+jobs:
+  build:
+   runs-on: self-hosted 
+   steps:
+     - name: actions/checkout
+       uses: actions/checkout@v2 
+     - name: deploy k8s manifest 
+       run: | 
+        kubectl apply -f ./kubernets.namespace.yaml
+        kubectl apply -f ./kubernets.deployment.yaml
+        kubectl apply -f ./kubernets.service.yaml 
